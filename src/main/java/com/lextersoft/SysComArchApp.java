@@ -3,6 +3,7 @@ package com.lextersoft;
 import com.lextersoft.config.ApplicationProperties;
 import com.lextersoft.config.DefaultProfileUtil;
 
+import com.lextersoft.config.FileStorageProperties;
 import io.github.jhipster.config.JHipsterConstants;
 
 import org.apache.commons.lang3.StringUtils;
@@ -21,7 +22,7 @@ import java.util.Arrays;
 import java.util.Collection;
 
 @SpringBootApplication
-@EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
+@EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class, FileStorageProperties.class})
 public class SysComArchApp {
 
     private static final Logger log = LoggerFactory.getLogger(SysComArchApp.class);
@@ -58,6 +59,11 @@ public class SysComArchApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        System.setProperty("http.proxyHost", "BDISVR04");
+        System.setProperty("http.proxyPort", "8080");
+        System.setProperty("https.proxyHost", "BDISVR04");
+        System.setProperty("https.proxyPort", "8080");
+
         SpringApplication app = new SpringApplication(SysComArchApp.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();

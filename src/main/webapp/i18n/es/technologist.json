@@ -1,0 +1,21 @@
+{
+    "sysComArchApp": {
+        "technologist": {
+            "home": {
+                "title": "Technologists",
+                "createLabel": "Crear nuevo Technologist",
+                "createOrEditLabel": "Crear o editar Technologist"
+            },
+            "created": "Un nuevo Technologist ha sido creado con el identificador {{ param }}",
+            "updated": "Un Technologist ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Technologist ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Technologist {{ id }}?"
+            },
+            "detail": {
+                "title": "Technologist"
+            },
+            "name": "Name"
+        }
+    }
+}

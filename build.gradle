@@ -239,6 +239,7 @@ dependencies {
     compile ("io.springfox:springfox-swagger2") {
         exclude module: 'mapstruct'
     }
+    compile 'org.jsoup:jsoup:1.11.3'
     compile "io.springfox:springfox-bean-validators"
     compile "org.postgresql:postgresql"
     liquibaseRuntime "org.postgresql:postgresql"

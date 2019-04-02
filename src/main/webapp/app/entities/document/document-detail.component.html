@@ -1,0 +1,64 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="document">
+            <h2><span jhiTranslate="sysComArchApp.document.detail.title">Document</span> {{document.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="sysComArchApp.document.title">Title</span></dt>
+                <dd>
+                    <span>{{document.title}}</span>
+                </dd>
+                <dt><span jhiTranslate="sysComArchApp.document.name">Name</span></dt>
+                <dd>
+                    <span>{{document.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="sysComArchApp.document.uploadDate">Upload Date</span></dt>
+                <dd>
+                    <span>{{document.uploadDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="sysComArchApp.document.archiveName">Archive Name</span></dt>
+                <dd>
+                    <span>{{document.archiveName}}</span>
+                </dd>
+                <dt><span jhiTranslate="sysComArchApp.document.decription">Decription</span></dt>
+                <dd>
+                    <span>{{document.decription}}</span>
+                </dd>
+                <dt><span jhiTranslate="sysComArchApp.document.subject">Subject</span></dt>
+                <dd>
+                    <div *ngIf="document.subjectId">
+                        <a [routerLink]="['/subject', document.subjectId, 'view']">{{document.subjectName}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="sysComArchApp.document.student">Student</span></dt>
+                <dd>
+                    <div *ngIf="document.studentId">
+                        <a [routerLink]="['/student', document.studentId, 'view']">{{document.studentName}}</a>
+                    </div>
+                </dd>
+            </dl>
+            <p *ngFor="let doc of document.textQueries">
+                {{doc.text}}.
+                <br>
+                Coincidencias:
+                <ng-container *ngFor="let c of doc.coincidences">
+                    <a [href]="c.link">
+                        {{c.text}}
+                    </a>
+                </ng-container>
+            </p>
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/document', document.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

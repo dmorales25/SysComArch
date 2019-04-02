@@ -1,0 +1,34 @@
+entity Technologist {
+	name String required
+}
+
+entity Subject {
+	name String required
+}
+
+entity Student {
+	name String required
+    enrollment String required
+    age Integer required
+    email String required
+}
+
+entity Document {
+	title String required
+    name String required
+    uploadDate LocalDate required
+    archiveName String required
+    decription String required
+}
+
+
+relationship ManyToOne {
+	Student{technologist(name) required} to Technologist
+    Document{subject(name) required} to Subject
+    Document{student(name) required} to Student
+}
+
+
+dto * with mapstruct
+paginate * with pagination
+service * with serviceImpl
