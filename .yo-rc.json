@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.lextersoft",
+      "nativeLanguage": "es"
+    },
+    "jhipsterVersion": "5.6.0",
+    "applicationType": "monolith",
+    "baseName": "SysComArch",
+    "packageName": "com.lextersoft",
+    "packageFolder": "com/lextersoft",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NmEwZTg2ZDhkNDg2MjMzZDQ3NmQ5MTYyYjU4MGE2ZDJkMGE5NTY1NzExYWM4OTRkZTU5ZDczMjc3YzkwNDY3NjhlNzAyN2ZiNjlkZDI3MWUwYjRjZTA4ZTdhM2E3OTJkMGM5ODdmMzMxNTgwNTA2ZTU2YjA5Y2IyMWQ4YjMwZDI=",
+    "clientFramework": "angularX",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [
+      "gatling",
+      "cucumber",
+      "protractor"
+    ],
+    "jhiPrefix": "jhi",
+    "enableTranslation": true,
+    "nativeLanguage": "es",
+    "languages": [
+      "es",
+      "en"
+    ]
+  }
+}
